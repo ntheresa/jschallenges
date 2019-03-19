@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 5</title>
+    <style>
+    body{
+        margin: 2%;
+        border: 1px solid black;
+        background-color: #b3b3b3;
+    }
+
+    #image{
+        line-height:325px;
+        width: 400px;
+        height: 360px;
+        border:5px solid black;
+        margin:0 auto;
+        background-repeat: no-repeat;
+        color:#000000;
+        text-align: center;
+        background-color: #8e68ff;
+        background-size: 100%;
+        margin-bottom:25px;
+        font-size:150%;
+    }
+    .preview{
+        width:10%;
+        margin-left:17%;
+        border: 10px solid black;
+    }
+    img{
+        width:95%;
+
+    }
+    h1{
+        text-align: center;
+    }
+    </style>
+
+    <script>
+    // I used Two functions here.  Starter idea at:
+    // https://codepen.io/ColleenEMc/pen/XmZzWw
+    function upDate(previewPic) {
+      var hoverImage = document.querySelector("#image");
+      var imageSoure = previewPic.src;
+      hoverImage.innerHTML = previewPic.alt;
+      hoverImage.style.backgroundImage = "url('" +imageSoure+ "')";
+    }
+
+    function unDo() {
+      var image = document.querySelector("#image");
+      image.style.backgroundImage = "url('#8e68ff')";
+      image.innerHTML = 'Hover or tab over/into an image below.'
+    }
+    </script>
+</head>
+
+<body>
+    <h1>Challenge 5</h1>
+        <div id = "image">
+            Hover or tab over/into an image below.
+        </div>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "1"
+            alt = "Vegan Crunchwraps"
+            src = "https://pinchofyum.com/wp-content/uploads/Vegan-Crunchwraps-with-Cashew-Queso.jpg" onmouseover='upDate(this)' onfocus='upDate(this)' onmouseleave='unDo()' onblur='unDo()'>
+
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "1"
+            alt = "Lentil Soup"
+            src = "https://pinchofyum.com/wp-content/uploads/Crockpot-Lentil-Soup-3.jpg" onmouseover='upDate(this)' onfocus='upDate(this)' onmouseleave='unDo()' onblur='unDo()'>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "1" alt = "Miracle Bread"
+            src = "https://pinchofyum.com/wp-content/uploads/Miracle-No-Knead-Bread-3-2.jpg" onmouseover='upDate(this)' onfocus='upDate(this)' onmouseleave='unDo()' onblur='unDo()'>
+
+
+        <img class = "preview" tabindex = "1" alt = "Avocado Egg Salad"
+            src = "https://pinchofyum.com/wp-content/uploads/Avocado-Egg-Salad-6.jpg" onmouseover='upDate(this)' onfocus='upDate(this)' onmouseleave='unDo()' onblur='unDo()'>
+
+
+            <img class = "preview" tabindex = "1" alt = "Chocolate Chip Cookies"
+                src = "https://pinchofyum.com/wp-content/uploads/Chocolate-Chip-Cookies.jpg" onmouseover='upDate(this)' onfocus='upDate(this)' onmouseleave='unDo()' onblur='unDo()'>
+
+
+                <img class = "preview" tabindex = "1"   alt = "Fettuccine with Shrimp"
+                    src = "https://pinchofyum.com/wp-content/uploads/Red-Pepper-Fettuccine-with-Shrimp.jpg" onmouseover='upDate(this)' onfocus='upDate(this)' onmouseleave='unDo()' onblur='unDo()'>
+
+
+
+</body>
+</html>
